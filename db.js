@@ -4,10 +4,10 @@ const mongoose = require("mongoose");
 require('dotenv').config();
 
 // database for live server
-//const mongoURI = process.env.MONGODB_URL; 
+const mongoURI = process.env.MONGODB_URL; 
 
 //Define the mongodb connection url.  //local database created data eith your ndatabase name.
-const mongoURI = process.env.MONGODB_URL_LOCAL;
+//const mongoURI = process.env.MONGODB_URL_LOCAL;
 
 mongoose.connect(mongoURI, {
     useNewUrlParser: true,
