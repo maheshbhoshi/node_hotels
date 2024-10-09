@@ -1,7 +1,13 @@
 const mongoose = require("mongoose");
 
-//Define the mongodb connection url.
-const mongoURI = "mongodb://127.0.0.1:27017/hotels"; // created data eith your ndatabase name.
+// import .env configuration.
+require('dotenv').config();
+
+// database for live server
+//const mongoURI = process.env.MONGODB_URL; 
+
+//Define the mongodb connection url.  //local database created data eith your ndatabase name.
+const mongoURI = process.env.MONGODB_URL_LOCAL;
 
 mongoose.connect(mongoURI, {
     useNewUrlParser: true,
