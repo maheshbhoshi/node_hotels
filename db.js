@@ -10,14 +10,14 @@ const mongoURI = process.env.MONGODB_URL;
 //const mongoURI = process.env.MONGODB_URL_LOCAL;
 
 mongoose.connect(mongoURI, {
-    useNewUrlParser: true,
+    useNewUrlParser: true,  
     useUnifiedTopology: true,
   })
 
     const db = mongoose.connection;
 
   db.on('connected', () =>{
-    console.log("connected to MongoDB Server");
+    console.log("connected to MongoDB Server");      
   })
 
   db.on('error', (err) =>{
